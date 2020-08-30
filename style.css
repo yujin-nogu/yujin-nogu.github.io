@@ -233,6 +233,7 @@ a:hover {
   width: 32px;
   height: 40px;
   cursor: pointer;
+  color: #6020b0;
 }
 
 .nav-button::before,
@@ -338,7 +339,7 @@ body {
 /* メイン全体 */
 .body {
   margin: 0;
-
+  
 }
 
 
@@ -351,13 +352,12 @@ body {
 }
 
 
-
-
 .main h2 {
+  font-size: 24px;
   display: inline-block;
   margin-top: 30px;
   margin-bottom: 20px;
-  font-size: 32px;
+
 }
 
 .main h2+p {
@@ -365,6 +365,23 @@ body {
   color: #3ba6c9;
   margin-bottom: 30px;
 }
+
+
+
+@media (min-width: 900px) {
+  .main h2 {
+    font-size: 32px;
+  }
+  
+  .main h2+p {
+    font-size: 12px;
+  }
+  
+
+
+
+}
+
 
 
 
@@ -377,23 +394,13 @@ body {
 
 .message .hero {
   display: inline-block;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1.68;
   margin-bottom: 20px;
-
+  margin-top: 20px;
+  font-weight: bold;
 }
 
-@media (min-width: 900px) {
-  .message .hero {
-    margin-bottom: 38px;
-    font-size: 32px;
-    line-height: 1.68;
-    font-weight: bold;
-    text-align: left;
-    letter-spacing: 0px;
-  }
-
-}
 
 
 
@@ -417,26 +424,6 @@ body {
 
 
 
-.message .concept {
-  display: flex;
-  overflow: hidden;
-  justify-content: space-between;
-  /* padding-top: 262px; */
-  margin-top: 131px;
-  margin-bottom: 113px;
-}
-
-
-
-
-.message .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: space-between;
-  width: 100%;
-  text-align: left;
-}
 
 
 .message h4 {
@@ -446,10 +433,11 @@ body {
 
 
 
-.message p {
+.message .para {
   display: inline-block;
   margin-bottom: 32px;
   font-size: 16px;
+  font-weight: bold;
   line-height: 1.68;
   text-align: left;
   letter-spacing: 0px;
@@ -464,46 +452,116 @@ body {
   display: block;
   justify-content: center;
   /* margin-top: 131px; */
+}
 
+.message .img img{
+  width: 80%;  
+}
+
+.message .concept {
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+  padding: 0;
+  width: 100%;
+}
+
+.message .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+.message .img {
+  width: 488px;
+  width: 100%;
+}
+
+.message .img img {
+  width: 100%;
+  margin: 0 auto;
 }
 
 
 
 
-@media (min-width:1170px) {
 
+@media (min-width: 900px) {
+  .message .hero {
+    margin-bottom: 38px;
+    font-size: 28px;
+    line-height: 1.68;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 0px;
+  }
+  
+  .message .concept {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    margin-top: 131px;
+    margin-bottom: 113px;
+  }
+  
+  
+  
+  
+  .message .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: space-between;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .message .img img{
+    width: 400px;    
+  }
+  
+  
+}
+
+
+@media (min-width:1170px) {
+  
   .message .back-image {
     background-image: url("en.svg");
     background-color: rgba(255, 255, 255, 0);
     background-repeat: no-repeat;
-    background-position: right -100px bottom 115px;
+    background-position: right -80px bottom 115px;
   }
-
+  
   .message .container {
     display: flex;
-
+    
   }
-
-
+  
+  
   .message .concept {
     flex-direction: row;
     align-items: flex-start;
     padding: 0;
     width: 100%;
   }
-
+  
   .message .text {
     display: flex;
     justify-content: flex-start;
     justify-content: space-between;
   }
-
-
+  
+  .message .img img{
+    width: 518px;
+    
+  }
+  
   .message img {
-    max-width: 518px;
+    width: 100%;
     margin-left: auto;
   }
-
+  
 }
 
 
@@ -536,7 +594,7 @@ body {
 
 .service p {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   margin-bottom: 20px;
   line-height: 1.62;
 }
@@ -704,6 +762,13 @@ body {
   width: 100%;
 }
 
+.question h3 {
+  font-size: 12px;
+  line-height: 1.86;
+}
+
+
+
 
 @media (min-width: 900px) {
   .question h2 {
@@ -711,12 +776,15 @@ body {
     font-size: 32px;
     color: #333333;
   }
-
+  
   .question h2+p {
     font-size: 16px;
     color: #3ba6c9;
   }
-
+  
+  .question h3 {
+    font-size: 14px;
+  }
 }
 
 
@@ -810,19 +878,20 @@ body {
   .blog {
     padding: 54px 0 86px 0;
   }
-
+  
   .blog h2 {
     display: inline-block;
     font-size: 32px;
     color: #333333;
     line-height: 0.875;
   }
-
+  
   .blog h2+p {
     font-size: 16px;
     color: #3ba6c9;
     line-height: 1.69;
   }
+  
 
   .blog .logs {
     display: flex;
@@ -832,7 +901,7 @@ body {
     margin-top: 57px;
     overflow: visible;
   }
-
+  
   .blog .log {
     display: flex;
     flex-direction: column;
@@ -952,14 +1021,10 @@ body {
 
 .contact h2 {
   color: #ffffff;
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 32px;
 }
 
 
 .contact h2+p {
-  font-size: 16px;
   color: #ffffff;
 }
 
@@ -967,7 +1032,8 @@ body {
   display: inline-block;
   margin-top: 44px;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 1.69;
   margin-bottom: 33px;
 }
 
@@ -1078,6 +1144,7 @@ body {
     margin-top: 44px;
     color: #ffffff;
     font-size: 16px;
+
     margin-bottom: 44px;
   }
 
@@ -1181,7 +1248,7 @@ body {
 }
 
 .footer .site h1 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -1224,11 +1291,16 @@ body {
     padding-bottom: 50px;
     background-color: #f8f8f8;
   }
-
-
+  
+  
   .footer .site {
     display: flex;
     flex-direction: column;
+  }
+  
+  .footer .site h1 {
+    font-size: 24px;
+    font-weight: bold;
   }
 
   .footer .site .link {
