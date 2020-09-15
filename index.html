@@ -25,6 +25,7 @@
     <!-- jQuery.jsの読み込み -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   </head>
+
   <body>
     <header class="header">
       <div class="container">
@@ -34,29 +35,33 @@
         </div>
 
         <div class="menu">
-          <a href="#" class="list">特徴</a>
-          <a href="#" class="list">価格</a>
-          <a href="#" class="list">お問い合わせ</a>
+          <a href="#feature" class="list">特徴</a>
+          <a href="#price" class="list">価格</a>
+          <a href="#contact" class="list">お問い合わせ</a>
         </div>
 
         <div class="btn-menu">
-          <a href="#1" class="btn">お問い合わせ</a>
+          <a href="#contact" class="btn">お問い合わせ</a>
         </div>
 
         <!-- ナビゲーションメニュー：モバイル -->
         <nav class="nav">
           <ul>
             <li>
-              <a href="#" class="list">特徴</a>
+              <a href="#feature" class="list" onClick="navFunc()">特徴</a>
             </li>
             <li>
-              <a href="#" class="list">価格</a>
+              <a href="#price" class="list" onClick="navFunc()">価格</a>
             </li>
             <li>
-              <a href="#" class="list">お問い合わせ</a>
+              <a href="#contact" class="list" onClick="navFunc()"
+                >お問い合わせ</a
+              >
             </li>
             <li>
-              <a href="#" class="btn">お問い合わせ</a>
+              <a href="#contact" class="btn" onClick="navFunc()"
+                >お問い合わせ</a
+              >
             </li>
           </ul>
         </nav>
@@ -68,7 +73,7 @@
     </header>
 
     <div class="main">
-      <section class="message" data-aos="fade-up">
+      <section class="top">
         <div class="back-image">
           <div class="container">
             <div class="concept">
@@ -85,9 +90,9 @@
                     class="pc_br"
                   />デザインに注力されたい方の<br class="pc_br" />助けになります
                 </p>
-                <a href="#1" class="btn">お問い合わせ</a>
+                <a href="#contact" class="btn">お問い合わせ</a>
               </div>
-              <div class="img">
+              <div class="image">
                 <img src="manager_l.png" alt="manager" />
               </div>
             </div>
@@ -95,105 +100,107 @@
         </div>
       </section>
 
-      <section class="service" data-aos="fade-up">
-        <div class="service-container">
+      <section class="feature" data-aos="fade-up" id="feature">
+        <div class="feature-container">
           <h2>ユアコーディング3つの特徴</h2>
           <p>FEATURES</p>
 
-          <ul class="details">
-            <li class="detail coding" data-aos="fade-up">
-              <h3>高速コーディング</h3>
-              <div class="flex">
-                <p class="img">
-                  <img src="cto_s.png" alt="cto" />
-                </p>
-                <div class="text-box">
-                  <div class="text">
-                    <h4>
-                      コーディングに特化したフリーランスのため、<br
-                        class="pc_br"
-                      />
-                      スピード感を持った開発が可能。
-                    </h4>
-                    <p>
-                      開発は常にスピードとの勝負です。<br class="pc_br" />
-                      ユアコーディングはコーディングに特化しているため、<br
-                        class="pc_br"
-                      />
-                      素早く納品することで、クライアントがデザインに注力<br
-                        class="pc_br"
-                      />
-                      する助けとなります。
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="detail quality" data-aos="fade-up">
-              <h3>高品質</h3>
-              <div class="flex">
-                <div class="reverse">
+          <div class="details-contaier">
+            <ul class="details">
+              <li class="detail coding" data-aos="fade-up">
+                <h3>高速コーディング</h3>
+                <div class="flex">
+                  <p class="image">
+                    <img src="cto_s.png" alt="cto" />
+                  </p>
                   <div class="text-box">
                     <div class="text">
                       <h4>
-                        正しいマークアップで、<br class="pc_br" />
-                        内部SEOに強いコーディングを<br class="pc_br" />
-                        デフォルトで行います。
+                        コーディングに特化したフリーランスのため、<br
+                          class="pc_br"
+                        />
+                        スピード感を持った開発が可能。
                       </h4>
                       <p>
-                        ユアコーディングでは、「予測しやすい」「再利用しやすい」<br
+                        開発は常にスピードとの勝負です。<br class="pc_br" />
+                        ユアコーディングはコーディングに特化しているため、<br
                           class="pc_br"
                         />
-                        「保守しやすい」「拡張しやすい」と言った設計をもとに<br
+                        素早く納品することで、クライアントがデザインに注力<br
                           class="pc_br"
                         />
-                        きちんとコーディングを行うため、納品後も安心です。
+                        する助けとなります。
                       </p>
                     </div>
                   </div>
-                  <p class="img">
-                    <img
-                      src="building_website_s.png"
-                      alt="building_website"
-                    />
-                  </p>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li class="detail responce" data-aos="fade-up">
-              <h3>迅速なレスポンス</h3>
-              <div class="flex">
-                <p class="img">
-                  <img src="new_message_s.png" alt="new_message" />
-                </p>
-                <div class="text-box">
-                  <div class="text">
-                    <h4>
-                      原則いただいたメッセージは、<br class="pc_br" />
-                      業務時間内であれば6時間以内に<br class="pc_br" />
-                      お返しいたします。
-                    </h4>
-                    <p>
-                      連絡を返さないフリーランスが多い中、<br class="pc_br" />
-                      ユアコーディングでは定期的な進捗報告など、<br
-                        class="pc_br"
+              <li class="detail quality" data-aos="fade-up">
+                <h3>高品質</h3>
+                <div class="flex">
+                  <div class="reverse">
+                    <div class="text-box">
+                      <div class="text">
+                        <h4>
+                          正しいマークアップで、<br class="pc_br" />
+                          内部SEOに強いコーディングを<br class="pc_br" />
+                          デフォルトで行います。
+                        </h4>
+                        <p>
+                          ユアコーディングでは、「予測しやすい」「再利用しやすい」<br
+                            class="pc_br"
+                          />
+                          「保守しやすい」「拡張しやすい」と言った設計をもとに<br
+                            class="pc_br"
+                          />
+                          きちんとコーディングを行うため、納品後も安心です。
+                        </p>
+                      </div>
+                    </div>
+                    <p class="image">
+                      <img
+                        src="building_website_s.png"
+                        alt="building_website"
                       />
-                      社会人としての基本を踏まえて仕事を行なって<br
-                        class="pc_br"
-                      />
-                      おります。
                     </p>
                   </div>
                 </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+
+              <li class="detail responce" data-aos="fade-up">
+                <h3>迅速なレスポンス</h3>
+                <div class="flex">
+                  <p class="image">
+                    <img src="new_message_s.png" alt="new_message" />
+                  </p>
+                  <div class="text-box">
+                    <div class="text">
+                      <h4>
+                        原則いただいたメッセージは、<br class="pc_br" />
+                        業務時間内であれば6時間以内に<br class="pc_br" />
+                        お返しいたします。
+                      </h4>
+                      <p>
+                        連絡を返さないフリーランスが多い中、<br class="pc_br" />
+                        ユアコーディングでは定期的な進捗報告など、<br
+                          class="pc_br"
+                        />
+                        社会人としての基本を踏まえて仕事を行なって<br
+                          class="pc_br"
+                        />
+                        おります。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section class="price" data-aos="fade-up">
+      <section class="price" data-aos="fade-up" id="price">
         <div class="container">
           <h2>価格</h2>
           <p>PRICE</p>
@@ -279,7 +286,7 @@
         <p>BLOG</p>
         <div class="logs container">
           <article class="log">
-            <p class="img">
+            <p class="image">
               <img src="blog0123_s.png" alt="blog0123" />
             </p>
             <div class="text">
@@ -288,7 +295,7 @@
             </div>
           </article>
           <article class="log">
-            <p class="img">
+            <p class="image">
               <img src="blog0124_s.png" alt="blog0123" />
             </p>
             <div class="text">
@@ -300,7 +307,7 @@
             </div>
           </article>
           <article class="log">
-            <p class="img">
+            <p class="image">
               <img src="blog0125_s.png" alt="blog0123" />
             </p>
             <div class="text">
@@ -392,7 +399,7 @@
         </div>
       </section>
 
-      <section class="contact" id="1" data-aos="fade-up">
+      <section class="contact" id="contact" data-aos="fade-up">
         <div class="container">
           <h2>お問い合わせ</h2>
           <p>CONTACT</p>
@@ -471,7 +478,6 @@
     <!-- Swiper.js読み込み -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
 
-    <script src="swiper.js"></script>
     <script>
       var swiper = new Swiper(".swiper-container", {
         centeredSlides: true,
@@ -503,15 +509,14 @@
 
     <script>
       $(function () {
-        $('a[href^="#"]').click(function () {
-          var speed = 500;
+        $('a[href^="#"]').on("click", function () {
+          var speed = 600;
+          var header_height = 94;
           var href = $(this).attr("href");
           var target = $(href == "#" || href == "" ? "html" : href);
-          //ヘッダーの高さを取得
-          var header = $("header").height();
-          //ヘッダーの高さを引く
-          var position = target.offset().top - header;
-          $("html, body").animate({ scrollTop: position }, speed, "swing");
+          var aos_offset = !target.hasClass("aos-animate") ? 100 : 0;
+          var position = target.offset().top - header_height - aos_offset;
+          $("body,html").animate({ scrollTop: position }, speed, "swing");
           return false;
         });
       });
